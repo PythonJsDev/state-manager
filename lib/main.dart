@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:state_manager/bloc/bloc_app.dart';
 import 'package:state_manager/widgets/main_button.dart';
 import 'package:state_manager/riverpod/riverpod_app.dart';
 
@@ -23,6 +24,7 @@ class MyApp extends StatelessWidget {
       routes: <String, WidgetBuilder> {
         '/home': (context) => const HomePage(),
         '/riverpod': (context) => const RiverpodApp(),
+        '/bloc': (context) => const BlocApp(),
       },
       home: const HomePage(),
     );
@@ -43,7 +45,8 @@ class HomePage extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.center,
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: [
-            MainButton(label: 'Riverpod', route: '/riverpod')
+            MainButton(label: 'Riverpod', route: '/riverpod'),
+            MainButton(label: 'BLoC', route: '/bloc')
 
           ],
         ),
